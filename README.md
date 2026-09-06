@@ -11,6 +11,9 @@ follow each beat, and learn at your own pace. English by default, with Simplifie
 
 - Eleven guided lessons: open strings, tuning, scales, chord changes, fingerpicking,
   arpeggios, strumming, muting and singing.
+- A complete [Twinkle, Twinkle, Little Star practice](https://slow-strum.htrw24sw7s.workers.dev/?song=twinkle):
+  numbered melody and four-line TAB, note previews, synchronized fingering and
+  a current-bar score beside the playback controls. Two-beat notes keep ringing.
 - C, Am, F, G and G7 shapes with animated hand placement, plus a C major scale.
 - Player-oriented, left-hand, right-hand and side views; drag, zoom or expand the guide.
 - Synthesized ukulele notes, reference tuning tones, a metronome and a melody guide.
@@ -62,6 +65,7 @@ does not automatically publish a new version.
 
 - `src/studio.js` — lesson UI and playback coordination
 - `src/data.js` — lessons, chords, patterns and original practice lyrics
+- `src/song.js`, `src/song.css` — Twinkle melody, duration-aware score and TAB
 - `src/model.js`, `src/course-hands.js` — instrument and animated hands
 - `src/hand-motion.js`, `src/playing-view.js` — transitions and camera views
 - `src/audio.js` — synthesized sounds
@@ -88,6 +92,8 @@ original copyright notice retained alongside them.
 
 The [reference course](https://www.bilibili.com/video/BV1st411q7yc) is in Chinese.
 Videos and source songs are not redistributed or licensed by this project.
-The exercises and short lyrics here are independently written. Audio uses
+The course exercises and short lyrics here are independently written. The Twinkle
+practice independently transcribes the traditional melody in C major; no score
+image or recording is bundled. Audio uses
 synthesized notes rather than recorded vocals. Hand motions have not been
 individually reviewed by a music teacher.

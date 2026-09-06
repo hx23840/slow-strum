@@ -58,7 +58,7 @@ export class Ukulele {
   this.actionGroup=new THREE.Group();this.group.add(this.actionGroup);
   this.actionObserver=new MutationObserver(()=>this.syncAction());this.actionObserver.observe(panel.querySelector('#strum-symbol'),{childList:true,characterData:true,subtree:true});this.syncAction();
  }
- syncAction(){const symbol=this.host.closest('.visual-panel').querySelector('#strum-symbol').textContent.trim();this.showAction(({'↓':'D','↑':'U','×':'X','—':'-'})[symbol]||(/^[1-4]$/.test(symbol)?'P'+symbol:'-'));}
+ syncAction(){const symbol=this.host.closest('.visual-panel').querySelector('#strum-symbol').textContent.trim();this.showAction(({'↓':'D','↑':'U','×':'X','—':'-','⌒':'H'})[symbol]||(/^[1-4]$/.test(symbol)?'P'+symbol:'-'));}
  showAction(action){
   this.direction=action;this.activeString=action.startsWith('P')?4-Number(action[1]):-1;
   if(this.shownAction===action)return;this.shownAction=action;
@@ -70,10 +70,10 @@ export class Ukulele {
   }else if(this.activeString>=0){
    const ring=new THREE.Mesh(new THREE.RingGeometry(.105,.14,32),new THREE.MeshBasicMaterial({color,side:THREE.DoubleSide,depthTest:false}));ring.position.set(1.36,-.27+this.activeString*.18,.4);this.actionGroup.add(ring);
   }else if(action==='X'){this.actionGroup.add(this.label('×',1.36,0,.48,'#de8054',.7));}
-  this.actionHint.textContent=action==='D'?t('向下扫 · 从 4 弦到 1 弦'):action==='U'?t('向上扫 · 从 1 弦到 4 弦'):action==='X'?t('轻触琴弦，让声音停下来'):action==='-'?t('这一拍不拨弦'):t('拨第 {string} 弦 · 看橙色琴弦',{string:action.slice(1)});
+  this.actionHint.textContent=action==='D'?t('向下扫 · 从 4 弦到 1 弦'):action==='U'?t('向上扫 · 从 1 弦到 4 弦'):action==='X'?t('轻触琴弦，让声音停下来'):action==='H'?t('保持余音，不再拨弦'):action==='-'?t('这一拍不拨弦'):t('拨第 {string} 弦 · 看橙色琴弦',{string:action.slice(1)});
  }
 
  resize(){const {width,height}=this.host.getBoundingClientRect();this.renderer.setSize(width,height);this.camera.aspect=width/height;this.camera.updateProjectionMatrix();this.view(this.viewMode||'front');}
  render(){this.frame=requestAnimationFrame(this.render);let elapsed=performance.now()/1000-this.pulseTime;const active=elapsed<.38;this.pick.visible=false;let p=Math.min(elapsed/.25,1);this.pick.position.y=this.activeString>=0?-.27+this.activeString*.18:(this.direction==='U'?1:-1)*(.62-p*1.24);
- this.strings.forEach((line,s)=>{const pos=line.geometry.attributes.position;const vibrate=active&&(this.activeString<0||s===this.activeString)&&this.direction!=='X'&&this.direction!=='-';for(let i=0;i<pos.count;i++)pos.setZ(i,.255+(vibrate?.023*Math.sin(i/96*Math.PI)*Math.sin(elapsed*110)*Math.exp(-elapsed*10):0));pos.needsUpdate=true;line.material.color.set((this.direction==='D'||this.direction==='U'||s===this.activeString)?'#e69860':s===1?'#e7cf95':'#fff5d6');});this.controls.update();this.hands?.update();this.renderer.render(this.scene,this.camera);}
+ this.strings.forEach((line,s)=>{const pos=line.geometry.attributes.position;const vibrate=active&&(this.activeString<0||s===this.activeString)&&this.direction!=='X'&&this.direction!=='-'&&this.direction!=='H';for(let i=0;i<pos.count;i++)pos.setZ(i,.255+(vibrate?.023*Math.sin(i/96*Math.PI)*Math.sin(elapsed*110)*Math.exp(-elapsed*10):0));pos.needsUpdate=true;line.material.color.set((this.direction==='D'||this.direction==='U'||s===this.activeString)?'#e69860':s===1?'#e7cf95':'#fff5d6');});this.controls.update();this.hands?.update();this.renderer.render(this.scene,this.camera);}
 }

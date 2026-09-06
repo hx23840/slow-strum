@@ -3,3 +3,4 @@ import './studio.js';
 import './readability.css';
 
 import './i18n.css';
+import './song.css';

@@ -28,7 +28,7 @@ test('render messages have English coverage, including text and accessible label
   for(const m of source.matchAll(/(?:^|>)([^<>]*)(?=<|$)/g))check(m[1]);
   for(const m of source.matchAll(/(?:aria-label|title)="([^"]*)"/g))check(m[1]);
  };
- for(const file of ['data.js','studio.js','model.js','course-hands.js','hand-study.js']){
+ for(const file of ['song.js','data.js','studio.js','model.js','course-hands.js','hand-study.js']){
   function visit(n){
    if(!n||typeof n!=='object')return;
    if(n.type==='Literal'&&typeof n.value==='string')n.value.includes('<')?markup(n.value):check(n.value);

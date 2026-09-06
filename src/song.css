@@ -1,0 +1,25 @@
+/* Keep the score close to the instrument, with the complete piece below. */
+[hidden]{display:none!important}
+.song-follow{padding:12px 24px 16px;border-top:1px solid #e5e5db;background:#fafbf6}
+.song-follow .score-bar{max-width:620px;margin:auto;border:0;background:transparent;padding:0}
+.song-score.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.score-bar{min-width:0;border:1px solid #dedfd2;border-radius:12px;padding:16px;background:#fcfcf8}
+.score-bar-heading{display:flex;justify-content:space-between;gap:12px;color:#52674f;font-size:14px;margin-bottom:10px}
+.score-bar-heading small{font-size:13px;color:#646c5f}
+.score-staves{display:grid;grid-template-columns:64px repeat(4,minmax(0,1fr))}
+.score-labels,.score-beat{display:grid;grid-template-rows:42px repeat(4,23px) 28px;align-items:center;text-align:center}
+.score-labels{color:#65725f;font-size:13px;text-align:left}
+.score-labels small{font-size:13px}
+.score-beat{border:0;border-radius:7px;padding:0;background:transparent;color:#354a36;cursor:pointer;min-width:0}
+.score-beat>strong{font-family:Georgia,serif;font-size:27px;font-weight:500;line-height:1}
+.score-beat>small{font-size:14px;color:#646c5f}
+.score-beat:hover{background:#eef1e5}
+.score-beat.active{background:#e0ead5;box-shadow:inset 0 0 0 2px #799568}
+.score-beat:focus-visible{outline:3px solid #936b42;outline-offset:2px}
+.tab-string{height:23px;position:relative;display:flex;align-items:center;justify-content:center}
+.tab-string:before{content:'';position:absolute;left:0;right:0;height:1px;background:#a7af9d}
+.tab-string b{position:relative;font-size:17px;font-weight:600;background:#fcfcf8;padding:0 5px;line-height:21px;border-radius:4px}
+.tab-string b:empty{display:none}
+.score-beat.active .tab-string b{background:#e0ead5;color:#284222}
+.score-beat:hover .tab-string b{background:#eef1e5}
+@media(max-width:750px){.song-score.timeline{grid-template-columns:1fr}.song-follow{padding:12px}.score-bar{padding:12px}.score-staves{grid-template-columns:54px repeat(4,minmax(0,1fr))}}
