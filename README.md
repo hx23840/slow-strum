@@ -32,7 +32,7 @@ npm run dev
 ```
 
 Open the address printed in the terminal, usually http://127.0.0.1:5173/.
-On macOS, you can also use `启动练习室.command` after installing Node.js.
+On macOS, you can also use `start-practice.command` after installing Node.js.
 
 ```sh
 npm test

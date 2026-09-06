@@ -10,7 +10,7 @@
 
 本机开发：http://127.0.0.1:5173/
 
-双击 `启动练习室.command`，或在本目录执行：
+双击 `start-practice.command`，或在本目录执行：
 
 ```sh
 npm ci
