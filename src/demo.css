@@ -1,0 +1,28 @@
+/* Scoped to the existing demonstration panel; course, timeline and controls stay intact. */
+.visual-panel .model-stage{height:clamp(500px,54vh,670px);background:radial-gradient(ellipse at 55% 42%,#e3e9df 0,#f4f5eb 65%,#f7f8f0)}
+.visual-panel #three-host{inset:35px 5px 15px}
+.visual-panel .stage-watermark{display:none}
+.visual-panel .hands-toggle{position:absolute;left:15px;bottom:29px;z-index:3;padding:7px 10px;border:1px solid #c9d5bf;border-radius:6px;background:#fafcf3ed;color:#607d56;font-size:11px}
+.visual-panel .expand-demo{font-size:11px;color:#658357;border:1px solid #d5dfca;padding:6px 9px;border-radius:5px;white-space:nowrap;margin-left:3px}
+.visual-panel .player-position{position:absolute;bottom:29px;right:15px;font-size:10px;color:#809774;pointer-events:none}
+.visual-panel.demo-expanded{position:fixed;inset:16px;z-index:80;display:flex;flex-direction:column;box-shadow:0 0 0 100vmax #253a32bd;width:auto;height:auto;max-width:none}
+.visual-panel.demo-expanded .model-stage{flex:1;height:auto;min-height:0}
+.visual-panel.demo-expanded .panel-toolbar,.visual-panel.demo-expanded .finger-key,.visual-panel.demo-expanded .transport,.visual-panel.demo-expanded .transport-options{flex-shrink:0}
+@media(max-width:900px){.visual-panel .model-stage{height:480px}.visual-panel .player-position{font-size:8px;right:10px}.visual-panel .hands-toggle{font-size:9px;padding:6px 8px}}
+@media(max-width:620px){.visual-panel .model-stage{height:420px}.visual-panel .panel-toolbar{gap:4px}.visual-panel .live-label{font-size:8px}.visual-panel .segmented button{padding:5px 6px}.visual-panel .expand-demo{font-size:9px;padding:5px 6px}.visual-panel #three-host{inset:40px 0 15px}.visual-panel .player-position{bottom:22px;font-size:7px;right:8px}.visual-panel .hands-toggle{bottom:38px;left:10px}.visual-panel.demo-expanded{inset:5px}}
+.visual-panel .demo-action-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);font-size:12px;white-space:nowrap;color:#a0663f;background:#fcfaf0e8;border:1px solid #e7dac6;border-radius:7px;padding:9px 15px;pointer-events:none}
+.visual-panel .finger-key i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.visual-panel .press-key{background:#557a50}.visual-panel .play-key{background:#de8054}
+@media(max-width:620px){.visual-panel .demo-action-hint{font-size:10px;padding:7px 10px;bottom:26px}.visual-panel .finger-key>span:first-child{display:inline}}
+
+.visual-panel .sketch-hands{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+.visual-panel .hand-study-link{font-size:14px;color:#315c45;text-underline-offset:4px;white-space:nowrap;padding:6px}
+
+/* Course hand integration; retain the surrounding learning layout. */
+.visual-panel .hand-load-status{position:absolute;top:25px;left:50%;transform:translateX(-50%);max-width:90%;z-index:4;padding:12px 16px;background:#fffdf3ee;border:1px solid #d5dfca;border-radius:8px;font-size:15px;line-height:1.6}
+.visual-panel .hand-load-status button{font:inherit;color:#356a55;text-decoration:underline;background:none;border:0;cursor:pointer}
+.visual-panel .finger-key label{display:flex;align-items:center;gap:7px;margin-left:auto;font-size:14px;color:#3e5b49}
+.visual-panel .finger-key input{accent-color:#356a55}
+.visual-panel .panel-toolbar{flex-wrap:wrap}
+.visual-panel .demo-action-hint{max-width:95%;white-space:normal;text-align:center}
+@media(max-width:620px){.visual-panel .finger-key{gap:10px;flex-wrap:wrap}.visual-panel .finger-key label{margin-left:0}.visual-panel .hand-study-link{font-size:13px}.visual-panel .panel-toolbar .live-label{font-size:14px}.visual-panel .segmented button{font-size:13px}}

@@ -1,0 +1,151 @@
+/* Keep the original paper-and-sage identity at a readable practice scale. */
+:root{font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.6;color:#44564b;--muted:#6c776a}
+body{font-weight:400}
+h1,h2,.lesson-heading h1,.learn-intro h2,.section-heading h2{font-family:'Noto Serif SC','Songti SC',serif;font-weight:500;letter-spacing:.8px;color:#365342}
+h1,.lesson-heading h1{font-size:32px;line-height:1.5}
+h2,.learn-intro h2,.section-heading h2{font-size:24px;line-height:1.5}
+.brand small{font-size:10px;color:#6b7668;letter-spacing:.75px}
+.sidebar-intro{font-size:13px;line-height:1.8;color:#6b7668;margin-bottom:24px}
+.nav-heading{font-size:14px;font-weight:500;color:#62715f}
+.nav-heading>span{font-size:12px;color:#6b7866}
+.nav-group{font-size:13px;font-weight:400;color:#6e7c68;margin-top:20px}
+.lesson-link{font-size:16px;color:#61705c;min-height:44px}
+.nav-number{font-family:Georgia,serif;font-size:14px;color:#78836f}
+.lesson-link.active .nav-number{color:#35614c}
+.progress-box{font-size:13px;color:#64735e}
+.progress-box small,.source-side{font-size:12px;line-height:1.7;color:#737d69}
+.source-side{text-align:center;flex-wrap:wrap}
+.breadcrumb{font-size:14px;color:#6b7668}
+.breadcrumb strong{color:#526854;font-weight:500}
+.eyebrow,.eyebrow>span:last-child:not(.dot),.section-heading .eyebrow,.learn-intro .eyebrow{font-size:12px;color:#75816d;letter-spacing:1px}
+.lesson-heading p{font-size:16px;color:#687663;line-height:1.8;letter-spacing:0}
+.source-link{font-size:14px;color:#6a7a64;flex-shrink:0}
+.outline,.outline.small,.learn-intro .outline{font-size:14px;font-weight:500;min-height:40px}
+.visual-panel .panel-toolbar{height:auto;min-height:62px;padding-block:10px;flex-wrap:wrap;gap:8px}
+.visual-panel .live-label{font-size:14px;font-weight:500;white-space:nowrap}
+.visual-panel .segmented button{font-size:13px;font-weight:400;color:#6b7863;padding:7px 10px;min-height:34px}
+.visual-panel .segmented button.active{color:#426950}
+.visual-panel .expand-demo{font-size:13px;color:#55774e;padding:7px 10px;min-height:34px}
+.icon-button{width:36px;height:36px;color:#6c7d62;flex-shrink:0}
+.icon-button svg{width:19px;height:19px}
+.visual-panel .current-float>span,.visual-panel .motion-float>span{font-size:13px;font-weight:400;color:#6f7b65}
+.visual-panel .current-float small,.visual-panel .motion-float small{font-size:14px;color:#707c65;line-height:1.8}
+.visual-panel .current-float strong{font-size:54px;color:#4b7052;font-weight:400}
+.visual-panel .motion-float strong{font-size:40px;color:#bd784b}
+.visual-panel .model-help{font-size:12px;color:#707b63;line-height:1.6}
+.visual-panel .demo-action-hint{font-size:15px;font-weight:400;color:#91633e;line-height:1.6;max-width:calc(100% - 24px);white-space:normal;text-align:center;bottom:40px}
+.visual-panel .finger-key{font-size:13px;color:#64745b;height:auto;min-height:48px;padding:10px 14px;gap:10px 18px;line-height:1.6}
+.visual-panel .finger-key small{font-size:12px;color:#737e69}
+.transport{flex-wrap:wrap;gap:12px}
+.transport-main{flex-wrap:wrap;gap:8px}
+.primary{font-size:16px;font-weight:500;min-height:44px;padding:10px 17px}
+.primary svg{width:18px;height:18px}
+#transport-status{font-size:12px;color:#75806b;line-height:1.7;max-width:180px}
+.tempo label{font-size:14px;color:#6e7b64}
+.tempo b{font-family:Georgia,serif;font-size:23px;font-weight:400}
+.tempo small{font-size:12px}
+.speed-preset{font-size:13px;color:#6c7b63;min-height:32px;padding:4px 8px}
+.transport-options{font-size:14px;color:#68775f;flex-wrap:wrap;gap:12px 18px;line-height:1.8}
+.transport-options>span{font-size:12px;color:#78836c}
+input[type=checkbox]{width:16px;height:16px;flex-shrink:0}
+input[type=checkbox]:checked:after{font-size:13px}
+.guide-heading{font-size:15px;font-weight:500;flex-wrap:wrap;gap:6px;color:#4d684e}
+.guide-heading>span:last-child{font-size:13px;color:#6e7c63;font-weight:400}
+#chord-diagram,#chord-diagram svg{height:215px}
+#chord-diagram svg{width:280px;max-width:100%}
+#chord-diagram text{font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;font-size:15px;fill:#64745b}
+#chord-diagram text[fill="white"]{fill:white;font-size:13px;font-weight:600}
+#chord-diagram text:last-child{font-size:12px;fill:#6d7b62}
+.chord-hint{font-size:16px;color:#52674b;line-height:1.8;margin-block:12px 18px}
+.chord-buttons{flex-wrap:wrap}
+.chord-buttons button{font-family:Georgia,serif;font-size:20px;font-weight:400;color:#6b7e5f;min-width:36px;width:auto;height:40px;padding:4px 8px}
+.chord-buttons button.active{color:#527244;border-color:#acc1a1}
+.text-button{font-size:13px;color:#6a805e;line-height:1.7;text-align:left}
+.text-button svg{width:14px;height:14px}
+.mini-label{font-size:15px;font-weight:500;color:#526d49}
+.why{font-size:15px;color:#66775b;line-height:1.85}
+.tip-box{padding:14px;gap:9px;color:#8a7651}
+.tip-box strong{font-size:14px;font-weight:500;color:#826d49}
+.tip-box p{font-size:14px;line-height:1.85;color:#847353}
+.rhythm-controls{font-size:14px;color:#6a7c60;flex-wrap:wrap;gap:12px}
+.rhythm-controls select{font-size:14px;color:#5f7655;max-width:260px;min-height:40px}
+.timeline-label,.timeline-label>span:first-child{font-size:13px;color:#6c7e61;line-height:1.8;gap:12px;flex-wrap:wrap}
+.bar-title b{font-family:Georgia,'Noto Serif SC',serif;font-size:20px;font-weight:400}
+.bar-title>span{font-size:12px;color:#75856b}
+.beat-cell{padding-block:10px;gap:10px}
+.beat-cell small{font-family:Georgia,serif;font-size:13px;color:#73866a}
+.beat-cell b{font-size:26px;font-weight:400;color:#78936a}
+.beat-cell .rest{font-size:20px;height:26px;color:#93a087}
+.beat-cell span{font-size:16px;font-weight:400;color:#718766}
+.beat-cell.active{background:#e6eee0;box-shadow:inset 0 0 0 1px #c4d6b5}
+.beat-cell.active b,.beat-cell.active small,.beat-cell.active span{color:#4f7741}
+.rhythm-legend{font-size:13px;color:#718066;line-height:1.8;flex-wrap:wrap;gap:8px 18px}
+.rhythm-legend b{font-size:16px;color:#69845a}
+.rhythm-legend span:last-child{font-size:12px;color:#7b886f}
+.learn-intro p,.lesson-steps p{font-size:16px;line-height:1.9;color:#65775a}
+.lesson-steps>div>span{font-family:Georgia,serif;font-size:22px;color:#869b73;font-weight:400}
+footer,footer span{font-size:12px;color:#7a866e;line-height:1.9}
+dialog h2{font-size:26px}
+dialog>p,.tuning-note{font-size:16px;line-height:1.8;color:#65775a}
+.tuning-strings small{font-size:14px;color:#687f5c}
+.tuning-strings span{font-size:13px;color:#6f845f}
+.toast{font-size:15px;line-height:1.7}
+/* Quiet surfaces and distinct headings preserve the original light rhythm. */
+.lesson-link.active{font-weight:500}
+.outline,.outline.small,.learn-intro .outline{font-weight:400}
+.lesson-heading{margin-bottom:28px}
+.lesson-heading h1{margin-block:12px}
+.visual-panel .demo-action-hint{background:#fcfaf0e8;border-color:#ece3ce;box-shadow:none}
+.visual-panel .model-stage{background:radial-gradient(ellipse at 55% 65%,#efeddf 0,#f7f6ee 48%,#fafaf4 90%)}
+.visual-panel .finger-key label{color:#64745b;font-weight:400}
+.hand-study-link{color:#6a7a64;font-weight:400}
+.rhythm-panel{padding-top:25px}
+.learn-panel{padding-top:35px}
+@media(max-width:1150px){
+ .transport .tempo{margin-left:auto}
+ .section-heading{flex-wrap:wrap}
+ .rhythm-controls{margin-left:auto}
+}
+@media(max-width:900px){
+ .sidebar{padding-inline:12px}
+ .lesson-link{font-size:15px;padding-inline:6px;gap:6px}
+ .brand small{font-size:9px;letter-spacing:0}
+ .source-link{font-size:13px}
+ .guide-panel{grid-template-columns:220px 1fr}
+ .guide-panel #chord-diagram{grid-row:2/6}
+}
+@media(max-width:620px){
+ .lesson-heading h1{font-size:27px}
+ .lesson-heading p{font-size:16px;max-width:none}
+ .source-link{display:none}
+ .lesson-link{font-size:15px;padding-inline:12px}
+ .visual-panel .panel-toolbar{padding:10px;gap:8px}
+ .visual-panel .live-label{flex-basis:100%;font-size:14px}
+ .visual-panel .segmented{margin-right:auto}
+ .visual-panel .segmented button{font-size:13px;padding:7px 9px}
+ .visual-panel .current-float strong{font-size:46px}
+ .visual-panel .model-help{font-size:12px;bottom:12px}
+ .visual-panel .demo-action-hint{font-size:14px;bottom:40px}
+ .visual-panel .finger-key{font-size:12px;justify-content:flex-start;padding-inline:14px;gap:8px 14px}
+ .visual-panel .finger-key small{display:block;margin:0}
+ .transport{padding:14px;gap:12px}
+ .transport-main>.icon-button{width:32px}
+ .transport .tempo{margin-left:0;justify-content:flex-start}
+ .tempo input{width:100px}
+ .transport-options{padding-inline:14px;font-size:14px;gap:10px 16px}
+ .guide-panel{grid-template-columns:1fr;padding:18px}
+ .guide-panel #chord-diagram{grid-row:auto;grid-column:1}
+ .guide-panel .chord-hint{font-size:16px;text-align:center}
+ .guide-panel .chord-buttons{justify-content:center}
+ .text-button{font-size:13px;margin-inline:auto}
+ .guide-heading>span:last-child{font-size:13px}
+ .section-heading h2,.learn-intro h2{font-size:23px}
+ .rhythm-controls{flex-direction:row;align-items:center;justify-content:space-between;width:100%;margin:6px 0 0}
+ .rhythm-controls select{font-size:14px;max-width:100%;padding-inline:8px}
+ .timeline{grid-template-columns:1fr;gap:12px}
+ .beat-cell span{font-size:17px}
+ .bar-title{padding:10px 12px}
+ .learn-intro p{max-width:none}
+ .tuning-strings{display:grid;grid-template-columns:1fr 1fr}
+ .tuning-strings span{font-size:13px}
+}

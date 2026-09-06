@@ -1,0 +1,43 @@
+/* Language controls share the existing paper-and-sage palette. */
+.language-control{display:inline-flex;align-items:center;gap:8px;color:#64745b;font-size:13px;flex-shrink:0}
+.language-control select{font:inherit;color:#526854;background:#fffefb;border:1px solid #dce2d5;border-radius:6px;min-height:38px;padding:6px 24px 6px 10px;cursor:pointer}
+.language-control select:focus-visible{outline:2px solid #d98256;outline-offset:3px}
+.topbar .language-control{order:1;margin-left:16px}
+.topbar .breadcrumb{margin-right:auto}
+:lang(en) .brand{font-family:Georgia,serif;font-size:26px;font-weight:400;letter-spacing:-.5px;gap:10px}
+:lang(en) .brand small{font-size:8px;letter-spacing:.55px}
+html:lang(en) h1,html:lang(en) h2,html:lang(en) .lesson-heading h1,html:lang(en) .learn-intro h2,html:lang(en) .section-heading h2{font-family:Georgia,serif;letter-spacing:-.5px;font-weight:400}
+:lang(en) .lesson-link{white-space:normal;line-height:1.5}
+:lang(en) .nav-group{font-size:11px;letter-spacing:1px}
+:lang(en) .nav-heading{flex-wrap:wrap;gap:6px}
+:lang(en) .progress-box>span{display:block;padding-right:44px}
+:lang(en) .progress-box>b{position:absolute;right:10px;top:27px}
+:lang(en) .guide-heading{align-items:flex-start}
+:lang(en) .guide-heading>span:last-child{max-width:110px;text-align:right}
+:lang(en) .visual-panel .live-label{flex-basis:140px}
+:lang(en) .visual-panel .model-help{flex-wrap:wrap}
+:lang(en) .current-float small,:lang(en) .motion-float small{max-width:180px}
+:lang(en) .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:12px}
+:lang(en) .beat-cell span{white-space:nowrap}
+:lang(en) .learn-intro p{max-width:340px}
+@media(max-width:1150px){:lang(en) .brand{font-size:23px}:lang(en) .brand small{font-size:6px}.language-control>span{display:none}}
+@media(max-width:900px){:lang(en) .brand{font-size:20px;gap:7px}:lang(en) .brand-icon{width:32px;flex-shrink:0}:lang(en) .nav-number{flex-shrink:0}}
+@media(max-width:620px){
+ .topbar{flex-wrap:wrap;height:auto!important;min-height:64px;padding-block:10px!important;gap:8px}
+ .topbar .language-control{margin-left:0}.topbar .breadcrumb{flex:1 0 100%;font-size:13px}
+ :lang(en) .brand{font-size:26px}:lang(en) .brand small{font-size:8px}
+ :lang(en) .lesson-link{white-space:nowrap}
+ :lang(en) .visual-panel .live-label{flex-basis:100%}
+ :lang(en) .current-float small,:lang(en) .motion-float small{max-width:140px;font-size:12px}
+ :lang(en) .model-help span{display:none}
+ :lang(en) .timeline{grid-template-columns:1fr}
+ :lang(en) .timeline-label{display:grid;gap:5px}
+ :lang(en) .rhythm-controls{gap:8px}
+ :lang(en) .rhythm-controls select{max-width:100%;width:100%}
+ :lang(en) .beat-cells{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:12px}
+ :lang(en) .beat-cell span{font-size:16px}
+}
+
+/* Keep the study page selector usable beside its back link. */
+body> #app>header{flex-wrap:wrap;gap:12px}
+body> #app>header .language-control{margin-left:auto}
